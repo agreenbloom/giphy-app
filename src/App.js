@@ -7,6 +7,7 @@ import Input from './components/Input/Input.component';
 import Button from './components/Button/Button.component';
 import List from './components/List/List.component';
 
+
 const API_URL = 'http://api.giphy.com/v1/gifs/search';
 const API_KEY = 'Mb6qpsLotHxYjpxVHGS9a1WWt0nRcepJ';
 
@@ -18,6 +19,7 @@ class App extends Component {
       gifs: [],
       store: [],
       query: '',
+      offset: 0
     }
   }
 
@@ -55,14 +57,14 @@ class App extends Component {
   }
 
   handleChange = (value, e) => {
-    console.log('value', value)
-
     this.setState({ query: value });
-    console.log('this.state.query', this.state.query);
   };
 
   searchGiphy = () => {
-    axios.get(`${API_URL}?q=${this.state.query}&limit=15&api_key=${API_KEY}`)
+
+    const {offset} = this.state;
+
+    axios.get(`${API_URL}?q=${this.state.query}&limit=15&api_key=${API_KEY}&offset=${offset}`)
     .then(resp => resp.data.data.map(result => ({
       slug: result.slug,
       id: result.id,
@@ -77,9 +79,36 @@ class App extends Component {
     })
   }
 
+  loadMoreGifs = (direction) => {
+
+    const { offset } = this.state;
+    let offsetAmount;
+
+    if(direction === 'next') {
+      offsetAmount = offset + 25;
+      console.log('hello')
+    } else {
+      offsetAmount = offset - 25;
+    }
+
+    this.setState({ offset: offsetAmount});
+
+    this.searchGiphy('hello')
+  }
+
+  showPaginationButtons= () => {
+    const { offset } = this.state;
+    return(
+      <React.Fragment>
+        <div onClick={() => { this.loadMoreGifs('next')}}> More </div>
+        { offset ? <div onClick={() => { this.loadMoreGifs('back')}}> Back </div> : null }
+      </React.Fragment>
+    )
+  }
+
   render() {
-    const { gifs, query} = this.state;
-    console.log('query.', query)
+    const { gifs, query, offset} = this.state;
+
     return (
       <div className="App">
         <div className="Card">
@@ -91,6 +120,9 @@ class App extends Component {
           </Button>
 
           <List gifs={gifs}/>
+
+          {query.length > 0 && this.showPaginationButtons()}
+
         </div>
       </div>
     );

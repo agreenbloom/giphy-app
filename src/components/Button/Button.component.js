@@ -18,16 +18,16 @@ class Button extends Component {
     console.log('props', props)
   }
 
-  handleClick = e => {
-    console.log('props', this.props)
-    this.props.handleClick(e);
+  handleOnClick = () => {
+
+    this.props.handleClick();
   };
 
   render() {
     const { handleClick, children} = this.props;
 
     return (
-      <button  onClick={this.handleClick}>
+      <button  onClick={this.handleOnClick}>
         {children}
       </button>
     );
