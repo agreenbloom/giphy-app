@@ -136,7 +136,7 @@ class App extends Component {
             </Button>
 
             <Button handleClick={this.sortByDate}>
-              Sort By Date
+              Sort By Trending Date
             </Button>
           </div>
           {isLoading && <p> loading </p>}
