@@ -59,11 +59,11 @@ export default class Input extends Component {
       inputElementProps.onKeyPress = this.handleKeyPress;
 
       return (
-        <div data-react-toolbox="input">
+        <React.Fragment>
           {React.createElement('input', inputElementProps)}
           {error ? <span className={'error'}>{error}</span> : null}
           {children}
-        </div>
+        </React.Fragment>
       );
     }
 }

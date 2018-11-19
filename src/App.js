@@ -57,7 +57,7 @@ class App extends Component {
 
   searchGiphy = () => {
 
-    const { offset, isLoading } = this.state;
+    const { offset } = this.state;
 
     this.setState({
       isLoading: true
@@ -122,12 +122,11 @@ class App extends Component {
   }
 
   render() {
-    const { gifs, query, offset, isLoading} = this.state;
+    const { gifs, query, isLoading} = this.state;
 
     return (
       <div className="App">
-        <div className="Card">
-          <div className="header">NAME LIST</div>
+        <div className="container">
           <Input type='text' label='Gifs' name='query' value={this.state.query} onChange={this.handleChange} maxLength={16 } />
 
           <Button handleClick={this.searchGiphy} >

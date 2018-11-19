@@ -1,0 +1,47 @@
+input[type="text"] {
+  width: 100%;
+  border-radius: 5px;
+  height: 35px;
+}
+
+button {
+  padding: 10px 15px;
+  border: solid 1px black;
+  background: white;
+  margin: 10px 20px 0 0;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  margin: 20px;
+  align-items: center;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  max-width: 100%;
+}
+
+.container {
+  border: solid 5px black;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+
+@media (max-width: 800px) {
+  .gallery{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gallery {
+    grid-template-columns:  1fr;
+  }
+}
