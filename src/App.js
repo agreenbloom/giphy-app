@@ -75,9 +75,9 @@ class App extends Component {
     })))
     .then(newData => {
       this.setState({gifs: newData})
-      this.searchTerm = '';
       this.setState({
-        isLoading: false
+        isLoading: false,
+        displayTitle: this.state.query
       })
     })
   }
@@ -95,16 +95,16 @@ class App extends Component {
 
     this.setState({ offset: offsetAmount});
 
-    this.searchGiphy('hello')
+    this.searchGiphy()
   }
 
   showPaginationButtons= () => {
     const { offset } = this.state;
     return(
-      <React.Fragment>
-        <div onClick={() => { this.loadMoreGifs('next')}}> More </div>
-        { offset ? <div onClick={() => { this.loadMoreGifs('back')}}> Back </div> : null }
-      </React.Fragment>
+      <div className="showMoreContainer">
+        <Button handleClick={() => { this.loadMoreGifs('next')}}> More </Button>
+        { offset ? <Button handleClick={() => { this.loadMoreGifs('back')}}> Back </Button> : null }
+      </div>
     )
   }
 
@@ -122,21 +122,23 @@ class App extends Component {
   }
 
   render() {
-    const { gifs, query, isLoading} = this.state;
+    const { gifs, query, isLoading, displayTitle} = this.state;
 
     return (
       <div className="App">
         <div className="container">
-          <Input type='text' label='Gifs' name='query' value={this.state.query} onChange={this.handleChange} maxLength={16 } />
+          <h1 className="title">{displayTitle ? `${displayTitle} Gifs` : 'Trending Gifs'}</h1>
+          <div className="inputContainer">
+            <Input type='text' label='Gifs' name='query' value={this.state.query} onChange={this.handleChange} maxLength={16 } />
 
-          <Button handleClick={this.searchGiphy} >
-            Search
-          </Button>
+            <Button handleClick={this.searchGiphy} >
+              Search
+            </Button>
 
-          <Button handleClick={this.sortByDate}>
-            Sort By Date
-          </Button>
-
+            <Button handleClick={this.sortByDate}>
+              Sort By Date
+            </Button>
+          </div>
           {isLoading && <p> loading </p>}
 
           {!isLoading && <List gifs={gifs}/>}

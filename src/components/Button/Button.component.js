@@ -13,13 +13,13 @@ class Button extends Component {
     onClick: null,
   };
 
-  handleOnClick = () => {
+  handleOnClick = (e) => {
 
-    this.props.handleClick();
+    this.props.handleClick(e);
   };
 
   render() {
-    const { handleClick, children} = this.props;
+    const { children} = this.props;
 
     return (
       <button  onClick={this.handleOnClick}>

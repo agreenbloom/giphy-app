@@ -63,8 +63,10 @@ export default class List extends Component {
 					href={img.preview}
 					key={i}
 					onClick={(e) => this.openLightbox(i, e)}
+          className="card"
 				>
-					<img src={img.preview}  alt={img.title}/>
+					<img src={img.preview}  alt=''/>
+          <p>{img.title}</p>
 				</a>
 			);
 		});

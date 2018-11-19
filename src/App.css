@@ -1,15 +1,26 @@
 input[type="text"] {
-  width: 100%;
   border-radius: 5px;
   height: 35px;
+  flex: 1;
 }
 
 button {
   padding: 10px 15px;
   border: solid 1px black;
   background: white;
-  margin: 10px 20px 0 0;
+  margin: 0 5px;
   border-radius: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: baseline;
+  background: #9ddcdc;
+  padding: 25px 20px;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 .gallery {
@@ -20,6 +31,7 @@ button {
   align-items: center;
   grid-gap: 10px;
   text-align: center;
+  padding: 20px;
 }
 
 .gallery img {
@@ -27,14 +39,35 @@ button {
 }
 
 .container {
-  border: solid 5px black;
-  margin: 20px;
-  padding: 20px;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.title {
+  text-transform: capitalize;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.showMoreContainer {
+    text-align: center;
+}
 
 @media (max-width: 800px) {
+
+  .inputContainer {
+    margin: 0 20px;
+  }
+
   .gallery{
     grid-template-columns: 1fr 1fr;
   }
@@ -44,4 +77,5 @@ button {
   .gallery {
     grid-template-columns:  1fr;
   }
+
 }
