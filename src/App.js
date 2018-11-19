@@ -37,7 +37,7 @@ class App extends Component {
       id: result.id,
       preview: result.images.preview_gif.url,
       src: result.images.downsized_large.url,
-      title: result.title,
+      caption: result.title,
       rating: result.rating,
       timeTrending: result.trending_datetime,
     })))
@@ -69,7 +69,7 @@ class App extends Component {
       id: result.id,
       preview: result.images.preview_gif.url,
       src: result.images.downsized_large.url,
-      title: result.title,
+      caption: result.title,
       rating: result.rating,
       timeTrending: result.trending_datetime,
     })))
@@ -102,8 +102,8 @@ class App extends Component {
     const { offset } = this.state;
     return(
       <div className="showMoreContainer">
+      { offset ? <Button handleClick={() => { this.loadMoreGifs('back')}}> Back </Button> : null }
         <Button handleClick={() => { this.loadMoreGifs('next')}}> More </Button>
-        { offset ? <Button handleClick={() => { this.loadMoreGifs('back')}}> Back </Button> : null }
       </div>
     )
   }

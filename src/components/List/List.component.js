@@ -15,6 +15,7 @@ export default class List extends Component {
 
   openLightbox = (index, event) => {
 		event.preventDefault();
+
 		this.setState({
 			currentImage: index,
 			lightboxIsOpen: true,
@@ -29,26 +30,21 @@ export default class List extends Component {
 	}
 
 	gotoPrevious = () => {
+    const currentImage = this.state.currentImage - 1;
 		this.setState({
-			currentImage: this.state.currentImage - 1,
+			currentImage,
 		});
 	}
 
 	gotoNext = () => {
+    const currentImage = this.state.currentImage + 1;
 		this.setState({
-			currentImage: this.state.currentImage + 1,
-		});
-	}
-
-	gotoImage = (index) => {
-		this.setState({
-			currentImage: index,
+			currentImage,
 		});
 	}
 
 	handleClickImage = () => {
 		if (this.state.currentImage === this.props.gifs.length - 1) return;
-
 		this.gotoNext();
 	}
 
@@ -66,7 +62,7 @@ export default class List extends Component {
           className="card"
 				>
 					<img src={img.preview}  alt=''/>
-          <p>{img.title}</p>
+          <p>{img.caption}</p>
 				</a>
 			);
 		});
@@ -80,18 +76,20 @@ export default class List extends Component {
 
   render() {
     const { gifs } = this.props;
-
+    const { currentImage, lightboxIsOpen } = this.state;
+    console.log('this.state', this.state.caption);
     return(
       <React.Fragment>
         {this.renderGallery()}
         <Lightbox
-					currentImage={this.state.currentImage}
+					currentImage={currentImage}
 					images={gifs}
-					isOpen={this.state.lightboxIsOpen}
+					isOpen={lightboxIsOpen}
 					onClickImage={this.handleClickImage}
 					onClickNext={this.gotoNext}
 					onClickPrev={this.gotoPrevious}
 					onClose={this.closeLightbox}
+
 				/>
       </React.Fragment>
     )
