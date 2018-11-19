@@ -64,7 +64,7 @@ export default class List extends Component {
 					key={i}
 					onClick={(e) => this.openLightbox(i, e)}
 				>
-					<img src={img.preview} />
+					<img src={img.preview}  alt={img.title}/>
 				</a>
 			);
 		});

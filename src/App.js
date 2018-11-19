@@ -36,9 +36,10 @@ class App extends Component {
       slug: result.slug,
       id: result.id,
       preview: result.images.preview_gif.url,
-      src: result.images.preview_gif.url,
+      src: result.images.downsized_large.url,
       title: result.title,
       rating: result.rating,
+      timeTrending: result.trending_datetime,
     })))
     .then(newData => {
       this.setState({gifs: newData, store: newData})
@@ -67,9 +68,10 @@ class App extends Component {
       slug: result.slug,
       id: result.id,
       preview: result.images.preview_gif.url,
-      src: result.images.preview_gif.url,
+      src: result.images.downsized_large.url,
       title: result.title,
       rating: result.rating,
+      timeTrending: result.trending_datetime,
     })))
     .then(newData => {
       this.setState({gifs: newData})
@@ -106,6 +108,19 @@ class App extends Component {
     )
   }
 
+  sortByDate = () => {
+    const { gifs } = this.state;
+
+    const gifsByTrendingDate = gifs.sort((a, b) => {
+      let dateA = new Date(a.timeTrending), dateB = new Date(b.timeTrending);
+      return dateA - dateB;
+    });
+
+    this.setState({
+      gifs: gifsByTrendingDate
+    })
+  }
+
   render() {
     const { gifs, query, offset, isLoading} = this.state;
 
@@ -118,6 +133,12 @@ class App extends Component {
           <Button handleClick={this.searchGiphy} >
             Search
           </Button>
+
+          <Button handleClick={this.sortByDate}>
+            Sort By Date
+          </Button>
+
+          {isLoading && <p> loading </p>}
 
           {!isLoading && <List gifs={gifs}/>}
 
