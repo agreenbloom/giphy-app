@@ -19,41 +19,35 @@ class App extends Component {
       gifs: [],
       store: [],
       query: '',
-      offset: 0
+      offset: 0,
+      isLoading: false,
     }
   }
 
 
   componentDidMount() {
+
+    this.setState({
+      isLoading: true
+    });
+
     axios.get(`http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&rating=g`)
     .then(resp => resp.data.data.map(result => ({
       slug: result.slug,
       id: result.id,
       preview: result.images.preview_gif.url,
-      original: result.images.original.url,
+      src: result.images.preview_gif.url,
       title: result.title,
       rating: result.rating,
     })))
     .then(newData => {
       this.setState({gifs: newData, store: newData})
+
+      this.setState({
+        isLoading: false
+      });
     })
     .catch(error => alert(error))
-  }
-
-
-  getInfo = () => {
-    axios.get(`${API_URL}?q=${this.state.query}&limit=15&api_key=${API_KEY}`)
-    .then(resp => resp.data.data.map(result => ({
-      slug: result.slug,
-      id: result.id,
-      preview: result.images.preview_gif.url,
-      original: result.images.original.url,
-      title: result.title,
-      rating: result.rating,
-    })))
-    .then(newData => {
-      this.setState({gifs: newData})
-    })
   }
 
   handleChange = (value, e) => {
@@ -62,20 +56,27 @@ class App extends Component {
 
   searchGiphy = () => {
 
-    const {offset} = this.state;
+    const { offset, isLoading } = this.state;
+
+    this.setState({
+      isLoading: true
+    })
 
     axios.get(`${API_URL}?q=${this.state.query}&limit=15&api_key=${API_KEY}&offset=${offset}`)
     .then(resp => resp.data.data.map(result => ({
       slug: result.slug,
       id: result.id,
       preview: result.images.preview_gif.url,
-      original: result.images.original.url,
+      src: result.images.preview_gif.url,
       title: result.title,
       rating: result.rating,
     })))
     .then(newData => {
       this.setState({gifs: newData})
       this.searchTerm = '';
+      this.setState({
+        isLoading: false
+      })
     })
   }
 
@@ -86,7 +87,6 @@ class App extends Component {
 
     if(direction === 'next') {
       offsetAmount = offset + 25;
-      console.log('hello')
     } else {
       offsetAmount = offset - 25;
     }
@@ -107,7 +107,7 @@ class App extends Component {
   }
 
   render() {
-    const { gifs, query, offset} = this.state;
+    const { gifs, query, offset, isLoading} = this.state;
 
     return (
       <div className="App">
@@ -119,7 +119,7 @@ class App extends Component {
             Search
           </Button>
 
-          <List gifs={gifs}/>
+          {!isLoading && <List gifs={gifs}/>}
 
           {query.length > 0 && this.showPaginationButtons()}
 

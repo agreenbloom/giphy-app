@@ -13,11 +13,6 @@ class Button extends Component {
     onClick: null,
   };
 
-  constructor(props) {
-    super(props);
-    console.log('props', props)
-  }
-
   handleOnClick = () => {
 
     this.props.handleClick();
