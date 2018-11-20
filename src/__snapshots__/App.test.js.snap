@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Trending Gifs
+        </h1>
+        <div
+          className="inputContainer"
+        >
+          <Input
+            className=""
+            disabled={false}
+            handleOnEnter={true}
+            label="Gifs"
+            name="query"
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            type="text"
+            value=""
+          />
+          <Button
+            disabled={false}
+            handleClick={[Function]}
+            onClick={null}
+          >
+            Search
+          </Button>
+          <Button
+            disabled={false}
+            handleClick={[Function]}
+            onClick={null}
+          >
+            Sort By Trending Date
+          </Button>
+        </div>
+        <p>
+           loading 
+        </p>
+      </div>,
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="title"
+          >
+            Trending Gifs
+          </h1>,
+          <div
+            className="inputContainer"
+          >
+            <Input
+              className=""
+              disabled={false}
+              handleOnEnter={true}
+              label="Gifs"
+              name="query"
+              onChange={[Function]}
+              onKeyPress={[Function]}
+              type="text"
+              value=""
+            />
+            <Button
+              disabled={false}
+              handleClick={[Function]}
+              onClick={null}
+            >
+              Search
+            </Button>
+            <Button
+              disabled={false}
+              handleClick={[Function]}
+              onClick={null}
+            >
+              Sort By Trending Date
+            </Button>
+          </div>,
+          <p>
+             loading 
+          </p>,
+          false,
+          false,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Trending Gifs",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Trending Gifs",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Input
+                className=""
+                disabled={false}
+                handleOnEnter={true}
+                label="Gifs"
+                name="query"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                type="text"
+                value=""
+              />,
+              <Button
+                disabled={false}
+                handleClick={[Function]}
+                onClick={null}
+              >
+                Search
+              </Button>,
+              <Button
+                disabled={false}
+                handleClick={[Function]}
+                onClick={null}
+              >
+                Sort By Trending Date
+              </Button>,
+            ],
+            "className": "inputContainer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "className": "",
+                "disabled": false,
+                "handleOnEnter": true,
+                "label": "Gifs",
+                "name": "query",
+                "onChange": [Function],
+                "onKeyPress": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Search",
+                "disabled": false,
+                "handleClick": [Function],
+                "onClick": null,
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Sort By Trending Date",
+                "disabled": false,
+                "handleClick": [Function],
+                "onClick": null,
+              },
+              "ref": null,
+              "rendered": "Sort By Trending Date",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " loading ",
+          },
+          "ref": null,
+          "rendered": " loading ",
+          "type": "p",
+        },
+        false,
+        false,
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+        >
+          <h1
+            className="title"
+          >
+            Trending Gifs
+          </h1>
+          <div
+            className="inputContainer"
+          >
+            <Input
+              className=""
+              disabled={false}
+              handleOnEnter={true}
+              label="Gifs"
+              name="query"
+              onChange={[Function]}
+              onKeyPress={[Function]}
+              type="text"
+              value=""
+            />
+            <Button
+              disabled={false}
+              handleClick={[Function]}
+              onClick={null}
+            >
+              Search
+            </Button>
+            <Button
+              disabled={false}
+              handleClick={[Function]}
+              onClick={null}
+            >
+              Sort By Trending Date
+            </Button>
+          </div>
+          <p>
+             loading 
+          </p>
+        </div>,
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="title"
+            >
+              Trending Gifs
+            </h1>,
+            <div
+              className="inputContainer"
+            >
+              <Input
+                className=""
+                disabled={false}
+                handleOnEnter={true}
+                label="Gifs"
+                name="query"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                type="text"
+                value=""
+              />
+              <Button
+                disabled={false}
+                handleClick={[Function]}
+                onClick={null}
+              >
+                Search
+              </Button>
+              <Button
+                disabled={false}
+                handleClick={[Function]}
+                onClick={null}
+              >
+                Sort By Trending Date
+              </Button>
+            </div>,
+            <p>
+               loading 
+            </p>,
+            false,
+            false,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Trending Gifs",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Trending Gifs",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Input
+                  className=""
+                  disabled={false}
+                  handleOnEnter={true}
+                  label="Gifs"
+                  name="query"
+                  onChange={[Function]}
+                  onKeyPress={[Function]}
+                  type="text"
+                  value=""
+                />,
+                <Button
+                  disabled={false}
+                  handleClick={[Function]}
+                  onClick={null}
+                >
+                  Search
+                </Button>,
+                <Button
+                  disabled={false}
+                  handleClick={[Function]}
+                  onClick={null}
+                >
+                  Sort By Trending Date
+                </Button>,
+              ],
+              "className": "inputContainer",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "className": "",
+                  "disabled": false,
+                  "handleOnEnter": true,
+                  "label": "Gifs",
+                  "name": "query",
+                  "onChange": [Function],
+                  "onKeyPress": [Function],
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Search",
+                  "disabled": false,
+                  "handleClick": [Function],
+                  "onClick": null,
+                },
+                "ref": null,
+                "rendered": "Search",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Sort By Trending Date",
+                  "disabled": false,
+                  "handleClick": [Function],
+                  "onClick": null,
+                },
+                "ref": null,
+                "rendered": "Sort By Trending Date",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " loading ",
+            },
+            "ref": null,
+            "rendered": " loading ",
+            "type": "p",
+          },
+          false,
+          false,
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

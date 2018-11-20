@@ -77,7 +77,7 @@ export default class List extends Component {
   render() {
     const { gifs } = this.props;
     const { currentImage, lightboxIsOpen } = this.state;
-    console.log('this.state', this.state.caption);
+
     return(
       <React.Fragment>
         {this.renderGallery()}

@@ -14,6 +14,7 @@ export default class Input extends Component {
       onKeyPress: PropTypes.func,
       required: PropTypes.bool,
       value: PropTypes.string,
+      handleOnEnter: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -29,9 +30,11 @@ export default class Input extends Component {
     };
 
     handleKeyPress = (event) => {
-      const {  onKeyPress } = this.props;
+      const {  onKeyPress, handleOnEnter } = this.props;
 
-      if (onKeyPress) onKeyPress(event);
+      if (handleOnEnter && (event.which === 13 || event.keyCode === 13)) onKeyPress(event)
+      if (!handleOnEnter && onKeyPress) onKeyPress(event);
+      
       return undefined;
     };
 

@@ -118,7 +118,8 @@ class App extends Component {
 
     this.setState({
       gifs: gifsByTrendingDate
-    })
+    });
+
   }
 
   render() {
@@ -129,7 +130,15 @@ class App extends Component {
         <div className="container">
           <h1 className="title">{displayTitle ? `${displayTitle} Gifs` : 'Trending Gifs'}</h1>
           <div className="inputContainer">
-            <Input type='text' label='Gifs' name='query' value={this.state.query} onChange={this.handleChange} maxLength={16 } />
+            <Input
+              type='text'
+              label='Gifs'
+              name='query'
+              value={this.state.query}
+              onChange={this.handleChange}
+              onKeyPress={this.searchGiphy}
+              handleOnEnter={true}
+            />
 
             <Button handleClick={this.searchGiphy} >
               Search
