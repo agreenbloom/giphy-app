@@ -12,7 +12,7 @@ const mockGifs = [
     rating: "g",
     slug: "3NtY188QaxDdC",
     src: "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
-    timeTrending: "2017-11-19 23:00:02",
+    timeTrending: "2018-11-19 23:00:02",
   }, {
     caption:"bird no GIF by Cheezburger",
     id: "g69ZPJfLy7hD2",
@@ -20,7 +20,7 @@ const mockGifs = [
     rating: "g",
     slug: "cheezburger-no-bird-g69ZPJfLy7hD2",
     src: "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
-    timeTrending: "2018-08-19 22:45:01",
+    timeTrending: "2017-08-19 22:45:01",
   }
 ];
 
@@ -80,7 +80,9 @@ describe('methods', () => {
       });
 
       wrapper.instance().sortByDate();
-      expect(wrapper.instance().state.gifs[0]).toBe(mockGifs[0])
+
+      expect(wrapper.instance().state.gifs[0].timeTrending).toBe("2017-08-19 22:45:01")
+      expect(wrapper.instance().state.gifs[1].timeTrending).toBe("2018-11-19 23:00:02")
     });
   });
 })
