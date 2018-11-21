@@ -5,6 +5,7 @@
   text-decoration: none;
   color: black;
   font-size: 14px;
+  position: relative;
 }
 
 .gallery {
@@ -22,4 +23,39 @@
 .gallery img {
   max-width: 100%;
   width: 100%;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.ratingContainer {
+  position: absolute;
+  right: -2500px;
+  display: flex;
+  align-items: center;
+}
+
+.showItemsHover {
+  right: 0;
+    overflow-x: visible;
+    opacity: 1;
+    -webkit-animation: fadeInRight 0.2s;
+    animation: fadeInRight 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.86);
+    height: 24px;
+    padding: 5px 20px;
 }

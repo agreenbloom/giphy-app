@@ -30,10 +30,9 @@ class Rating extends Component {
   }
 
   render() {
-    console.log('this.props', this.props.starsSelected)
     const { totalStars } = this.props;
     const { starsSelected } = this.state;
-    
+
     return (
       <div className="star-rating">
         {[...Array(totalStars)].map((n, i) => (
