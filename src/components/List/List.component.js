@@ -80,7 +80,6 @@ export default class List extends Component {
   					<img src={img.preview}  alt=''/>
   				</a>
           <div className="ratingContainer">
-            {console.log('img.ra', img.rating)}
             <Rating starsSelected={img.rating ? img.rating : 0} handleOnClick={this.handleRatingClick.bind(this, i)}/>
           </div>
         </div>

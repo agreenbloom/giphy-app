@@ -146,6 +146,9 @@ class App extends Component {
 
 
   sortByRating = () => {
+    this.setState({
+      isLoading: true,
+    })
     let { gifs } = this.state;
 
     const gifsWRating = gifs.filter(g => g.rating)
@@ -156,6 +159,9 @@ class App extends Component {
     this.setState({
       gifs: sortedGifs
     });
+    this.setState({
+      isLoading: false,
+    })
   }
 
   handleImageRating = (img) => {
