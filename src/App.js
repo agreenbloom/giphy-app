@@ -200,11 +200,6 @@ class App extends Component {
               Sort By Trending Date
             </Button>
 
-            {this.state.shouldShowRating && (
-              <Button handleClick={this.sortByRating}>
-                Sort By Rating
-              </Button>
-            )}
           </div>
 
           {isLoading && <p> loading </p>}
