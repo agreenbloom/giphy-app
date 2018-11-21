@@ -10,7 +10,7 @@ ShallowWrapper {
           "caption": "happy very funny GIF by Disney Zootopia",
           "id": "3NtY188QaxDdC",
           "preview": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-          "rating": "g",
+          "rating": 4,
           "slug": "3NtY188QaxDdC",
           "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
           "timeTrending": "2018-11-19 23:00:02",
@@ -19,7 +19,7 @@ ShallowWrapper {
           "caption": "bird no GIF by Cheezburger",
           "id": "g69ZPJfLy7hD2",
           "preview": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-          "rating": "g",
+          "rating": 5,
           "slug": "cheezburger-no-bird-g69ZPJfLy7hD2",
           "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
           "timeTrending": "2017-08-19 22:45:01",
@@ -44,32 +44,52 @@ ShallowWrapper {
         <div
           className="gallery"
         >
-          <a
-            className="card"
-            href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-            onClick={[Function]}
+          <div
+            className="imageContainer"
           >
-            <img
-              alt=""
-              src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-            />
-            <p>
-              happy very funny GIF by Disney Zootopia
-            </p>
-          </a>
-          <a
-            className="card"
-            href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-            onClick={[Function]}
+            <a
+              className="card"
+              href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+              onClick={[Function]}
+            >
+              <img
+                alt=""
+                src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+              />
+            </a>
+            <div
+              className="ratingContainer"
+            >
+              <Rating
+                handleOnClick={[Function]}
+                starsSelected={4}
+                totalStars={5}
+              />
+            </div>
+          </div>
+          <div
+            className="imageContainer"
           >
-            <img
-              alt=""
-              src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-            />
-            <p>
-              bird no GIF by Cheezburger
-            </p>
-          </a>
+            <a
+              className="card"
+              href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+              onClick={[Function]}
+            >
+              <img
+                alt=""
+                src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+              />
+            </a>
+            <div
+              className="ratingContainer"
+            >
+              <Rating
+                handleOnClick={[Function]}
+                starsSelected={5}
+                totalStars={5}
+              />
+            </div>
+          </div>
         </div>,
         <Lightbox
           closeButtonTitle="Close (Esc)"
@@ -82,7 +102,7 @@ ShallowWrapper {
                 "caption": "happy very funny GIF by Disney Zootopia",
                 "id": "3NtY188QaxDdC",
                 "preview": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-                "rating": "g",
+                "rating": 4,
                 "slug": "3NtY188QaxDdC",
                 "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
                 "timeTrending": "2018-11-19 23:00:02",
@@ -91,7 +111,7 @@ ShallowWrapper {
                 "caption": "bird no GIF by Cheezburger",
                 "id": "g69ZPJfLy7hD2",
                 "preview": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-                "rating": "g",
+                "rating": 5,
                 "slug": "cheezburger-no-bird-g69ZPJfLy7hD2",
                 "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
                 "timeTrending": "2017-08-19 22:45:01",
@@ -127,32 +147,52 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <a
-              className="card"
-              href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-              onClick={[Function]}
+            <div
+              className="imageContainer"
             >
-              <img
-                alt=""
-                src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-              />
-              <p>
-                happy very funny GIF by Disney Zootopia
-              </p>
-            </a>,
-            <a
-              className="card"
-              href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-              onClick={[Function]}
+              <a
+                className="card"
+                href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                onClick={[Function]}
+              >
+                <img
+                  alt=""
+                  src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                />
+              </a>
+              <div
+                className="ratingContainer"
+              >
+                <Rating
+                  handleOnClick={[Function]}
+                  starsSelected={4}
+                  totalStars={5}
+                />
+              </div>
+            </div>,
+            <div
+              className="imageContainer"
             >
-              <img
-                alt=""
-                src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-              />
-              <p>
-                bird no GIF by Cheezburger
-              </p>
-            </a>,
+              <a
+                className="card"
+                href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                onClick={[Function]}
+              >
+                <img
+                  alt=""
+                  src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                />
+              </a>
+              <div
+                className="ratingContainer"
+              >
+                <Rating
+                  handleOnClick={[Function]}
+                  starsSelected={5}
+                  totalStars={5}
+                />
+              </div>
+            </div>,
           ],
           "className": "gallery",
         },
@@ -164,45 +204,94 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <img
-                  alt=""
-                  src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-                />,
-                <p>
-                  happy very funny GIF by Disney Zootopia
-                </p>,
+                <a
+                  className="card"
+                  href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                  />
+                </a>,
+                <div
+                  className="ratingContainer"
+                >
+                  <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={4}
+                    totalStars={5}
+                  />
+                </div>,
               ],
-              "className": "card",
-              "href": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-              "onClick": [Function],
+              "className": "imageContainer",
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "0",
                 "nodeType": "host",
                 "props": Object {
-                  "alt": "",
-                  "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                  "children": <img
+                    alt=""
+                    src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                  />,
+                  "className": "card",
+                  "href": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "img",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "",
+                    "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "a",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "happy very funny GIF by Disney Zootopia",
+                  "children": Array [
+                    undefined,
+                    <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={4}
+                      totalStars={5}
+                    />,
+                  ],
+                  "className": "ratingContainer",
                 },
                 "ref": null,
-                "rendered": "happy very funny GIF by Disney Zootopia",
-                "type": "p",
+                "rendered": Array [
+                  undefined,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "handleOnClick": [Function],
+                      "starsSelected": 4,
+                      "totalStars": 5,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
             ],
-            "type": "a",
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -210,45 +299,94 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <img
-                  alt=""
-                  src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-                />,
-                <p>
-                  bird no GIF by Cheezburger
-                </p>,
+                <a
+                  className="card"
+                  href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                  />
+                </a>,
+                <div
+                  className="ratingContainer"
+                >
+                  <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={5}
+                    totalStars={5}
+                  />
+                </div>,
               ],
-              "className": "card",
-              "href": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-              "onClick": [Function],
+              "className": "imageContainer",
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
-                  "alt": "",
-                  "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                  "children": <img
+                    alt=""
+                    src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                  />,
+                  "className": "card",
+                  "href": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "img",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "",
+                    "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "a",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "bird no GIF by Cheezburger",
+                  "children": Array [
+                    undefined,
+                    <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={5}
+                      totalStars={5}
+                    />,
+                  ],
+                  "className": "ratingContainer",
                 },
                 "ref": null,
-                "rendered": "bird no GIF by Cheezburger",
-                "type": "p",
+                "rendered": Array [
+                  undefined,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "handleOnClick": [Function],
+                      "starsSelected": 5,
+                      "totalStars": 5,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
             ],
-            "type": "a",
+            "type": "div",
           },
         ],
         "type": "div",
@@ -267,7 +405,7 @@ ShallowWrapper {
               "caption": "happy very funny GIF by Disney Zootopia",
               "id": "3NtY188QaxDdC",
               "preview": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-              "rating": "g",
+              "rating": 4,
               "slug": "3NtY188QaxDdC",
               "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
               "timeTrending": "2018-11-19 23:00:02",
@@ -276,7 +414,7 @@ ShallowWrapper {
               "caption": "bird no GIF by Cheezburger",
               "id": "g69ZPJfLy7hD2",
               "preview": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-              "rating": "g",
+              "rating": 5,
               "slug": "cheezburger-no-bird-g69ZPJfLy7hD2",
               "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
               "timeTrending": "2017-08-19 22:45:01",
@@ -318,32 +456,52 @@ ShallowWrapper {
           <div
             className="gallery"
           >
-            <a
-              className="card"
-              href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-              onClick={[Function]}
+            <div
+              className="imageContainer"
             >
-              <img
-                alt=""
-                src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-              />
-              <p>
-                happy very funny GIF by Disney Zootopia
-              </p>
-            </a>
-            <a
-              className="card"
-              href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-              onClick={[Function]}
+              <a
+                className="card"
+                href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                onClick={[Function]}
+              >
+                <img
+                  alt=""
+                  src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                />
+              </a>
+              <div
+                className="ratingContainer"
+              >
+                <Rating
+                  handleOnClick={[Function]}
+                  starsSelected={4}
+                  totalStars={5}
+                />
+              </div>
+            </div>
+            <div
+              className="imageContainer"
             >
-              <img
-                alt=""
-                src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-              />
-              <p>
-                bird no GIF by Cheezburger
-              </p>
-            </a>
+              <a
+                className="card"
+                href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                onClick={[Function]}
+              >
+                <img
+                  alt=""
+                  src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                />
+              </a>
+              <div
+                className="ratingContainer"
+              >
+                <Rating
+                  handleOnClick={[Function]}
+                  starsSelected={5}
+                  totalStars={5}
+                />
+              </div>
+            </div>
           </div>,
           <Lightbox
             closeButtonTitle="Close (Esc)"
@@ -356,7 +514,7 @@ ShallowWrapper {
                   "caption": "happy very funny GIF by Disney Zootopia",
                   "id": "3NtY188QaxDdC",
                   "preview": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-                  "rating": "g",
+                  "rating": 4,
                   "slug": "3NtY188QaxDdC",
                   "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
                   "timeTrending": "2018-11-19 23:00:02",
@@ -365,7 +523,7 @@ ShallowWrapper {
                   "caption": "bird no GIF by Cheezburger",
                   "id": "g69ZPJfLy7hD2",
                   "preview": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-                  "rating": "g",
+                  "rating": 5,
                   "slug": "cheezburger-no-bird-g69ZPJfLy7hD2",
                   "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
                   "timeTrending": "2017-08-19 22:45:01",
@@ -401,32 +559,52 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <a
-                className="card"
-                href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-                onClick={[Function]}
+              <div
+                className="imageContainer"
               >
-                <img
-                  alt=""
-                  src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-                />
-                <p>
-                  happy very funny GIF by Disney Zootopia
-                </p>
-              </a>,
-              <a
-                className="card"
-                href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-                onClick={[Function]}
+                <a
+                  className="card"
+                  href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                  />
+                </a>
+                <div
+                  className="ratingContainer"
+                >
+                  <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={4}
+                    totalStars={5}
+                  />
+                </div>
+              </div>,
+              <div
+                className="imageContainer"
               >
-                <img
-                  alt=""
-                  src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-                />
-                <p>
-                  bird no GIF by Cheezburger
-                </p>
-              </a>,
+                <a
+                  className="card"
+                  href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                  />
+                </a>
+                <div
+                  className="ratingContainer"
+                >
+                  <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={5}
+                    totalStars={5}
+                  />
+                </div>
+              </div>,
             ],
             "className": "gallery",
           },
@@ -438,45 +616,94 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <img
-                    alt=""
-                    src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
-                  />,
-                  <p>
-                    happy very funny GIF by Disney Zootopia
-                  </p>,
+                  <a
+                    className="card"
+                    href="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt=""
+                      src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                    />
+                  </a>,
+                  <div
+                    className="ratingContainer"
+                  >
+                    <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={4}
+                      totalStars={5}
+                    />
+                  </div>,
                 ],
-                "className": "card",
-                "href": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-                "onClick": [Function],
+                "className": "imageContainer",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "0",
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "",
-                    "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                    "children": <img
+                      alt=""
+                      src="https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif"
+                    />,
+                    "className": "card",
+                    "href": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "",
+                      "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "happy very funny GIF by Disney Zootopia",
+                    "children": Array [
+                      undefined,
+                      <Rating
+                        handleOnClick={[Function]}
+                        starsSelected={4}
+                        totalStars={5}
+                      />,
+                    ],
+                    "className": "ratingContainer",
                   },
                   "ref": null,
-                  "rendered": "happy very funny GIF by Disney Zootopia",
-                  "type": "p",
+                  "rendered": Array [
+                    undefined,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "handleOnClick": [Function],
+                        "starsSelected": 4,
+                        "totalStars": 5,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
                 },
               ],
-              "type": "a",
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -484,45 +711,94 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <img
-                    alt=""
-                    src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
-                  />,
-                  <p>
-                    bird no GIF by Cheezburger
-                  </p>,
+                  <a
+                    className="card"
+                    href="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt=""
+                      src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                    />
+                  </a>,
+                  <div
+                    className="ratingContainer"
+                  >
+                    <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={5}
+                      totalStars={5}
+                    />
+                  </div>,
                 ],
-                "className": "card",
-                "href": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-                "onClick": [Function],
+                "className": "imageContainer",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "1",
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "",
-                    "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                    "children": <img
+                      alt=""
+                      src="https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif"
+                    />,
+                    "className": "card",
+                    "href": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "",
+                      "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "bird no GIF by Cheezburger",
+                    "children": Array [
+                      undefined,
+                      <Rating
+                        handleOnClick={[Function]}
+                        starsSelected={5}
+                        totalStars={5}
+                      />,
+                    ],
+                    "className": "ratingContainer",
                   },
                   "ref": null,
-                  "rendered": "bird no GIF by Cheezburger",
-                  "type": "p",
+                  "rendered": Array [
+                    undefined,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "handleOnClick": [Function],
+                        "starsSelected": 5,
+                        "totalStars": 5,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
                 },
               ],
-              "type": "a",
+              "type": "div",
             },
           ],
           "type": "div",
@@ -541,7 +817,7 @@ ShallowWrapper {
                 "caption": "happy very funny GIF by Disney Zootopia",
                 "id": "3NtY188QaxDdC",
                 "preview": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy-preview.gif",
-                "rating": "g",
+                "rating": 4,
                 "slug": "3NtY188QaxDdC",
                 "src": "https://media3.giphy.com/media/3NtY188QaxDdC/giphy.gif",
                 "timeTrending": "2018-11-19 23:00:02",
@@ -550,7 +826,7 @@ ShallowWrapper {
                 "caption": "bird no GIF by Cheezburger",
                 "id": "g69ZPJfLy7hD2",
                 "preview": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy-preview.gif",
-                "rating": "g",
+                "rating": 5,
                 "slug": "cheezburger-no-bird-g69ZPJfLy7hD2",
                 "src": "https://media3.giphy.com/media/g69ZPJfLy7hD2/giphy.gif",
                 "timeTrending": "2017-08-19 22:45:01",

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Button extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    handleClick: PropTypes.func, // was handleOnClick
+    handleClick: PropTypes.func, 
   };
 
   static defaultProps = {
@@ -14,7 +14,6 @@ class Button extends Component {
   };
 
   handleOnClick = (e) => {
-
     this.props.handleClick(e);
   };
 

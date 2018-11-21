@@ -7,7 +7,6 @@ import Input from './components/Input/Input.component';
 import Button from './components/Button/Button.component';
 import List from './components/List/List.component';
 
-
 const API_URL = 'http://api.giphy.com/v1/gifs/search';
 const API_KEY = 'Mb6qpsLotHxYjpxVHGS9a1WWt0nRcepJ';
 
@@ -17,7 +16,6 @@ class App extends Component {
     super(props)
     this.state = {
       gifs: [],
-      store: [],
       query: '',
       offset: 0,
       isLoading: false,
@@ -38,11 +36,10 @@ class App extends Component {
       preview: result.images.preview_gif.url,
       src: result.images.downsized_large.url,
       caption: result.title,
-      rating: result.rating,
       timeTrending: result.trending_datetime,
     })))
     .then(newData => {
-      this.setState({gifs: newData, store: newData})
+      this.setState({gifs: newData,})
 
       this.setState({
         isLoading: false
@@ -70,7 +67,6 @@ class App extends Component {
       preview: result.images.preview_gif.url,
       src: result.images.downsized_large.url,
       caption: result.title,
-      rating: result.rating,
       timeTrending: result.trending_datetime,
     })))
     .then(newData => {
@@ -119,7 +115,16 @@ class App extends Component {
     this.setState({
       gifs: gifsByTrendingDate
     });
+  }
 
+  handleImageRating = (img) => {
+    this.setState({
+      shouldShowRating: true
+    });
+
+    Object.keys(this.state.gifs).map(i => {
+      if (img.id === i.id) this.setState({i: img,})
+    });
   }
 
   render() {
@@ -147,10 +152,13 @@ class App extends Component {
             <Button handleClick={this.sortByDate}>
               Sort By Trending Date
             </Button>
+
+
           </div>
+
           {isLoading && <p> loading </p>}
 
-          {!isLoading && <List gifs={gifs}/>}
+          {!isLoading && <List gifs={gifs} handleRatingClick={this.handleImageRating}/>}
 
           {query.length > 0 && this.showPaginationButtons()}
 
