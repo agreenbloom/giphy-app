@@ -10,12 +10,13 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 100%;
   margin: 20px;
   align-items: center;
   grid-gap: 10px;
   text-align: center;
   padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .gallery img {
