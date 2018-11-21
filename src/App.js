@@ -6,6 +6,7 @@ import './App.css';
 import Input from './components/Input/Input.component';
 import Button from './components/Button/Button.component';
 import List from './components/List/List.component';
+import Spinner from './components/Spinner/Spinner.component';
 
 const API_URL = 'http://api.giphy.com/v1/gifs/search';
 const API_KEY = 'Mb6qpsLotHxYjpxVHGS9a1WWt0nRcepJ';
@@ -202,7 +203,7 @@ class App extends Component {
 
           </div>
 
-          {isLoading && <p> loading </p>}
+          {isLoading && <Spinner />}
 
           {!isLoading && <List gifs={gifs} handleRatingClick={this.handleImageRating}/>}
 

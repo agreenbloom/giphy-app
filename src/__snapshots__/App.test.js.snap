@@ -54,9 +54,7 @@ ShallowWrapper {
             Sort By Trending Date
           </Button>
         </div>
-        <p>
-           loading 
-        </p>
+        <Spinner />
       </div>,
       "className": "App",
     },
@@ -101,9 +99,7 @@ ShallowWrapper {
               Sort By Trending Date
             </Button>
           </div>,
-          <p>
-             loading 
-          </p>,
+          <Spinner />,
           false,
           false,
         ],
@@ -212,13 +208,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": " loading ",
-          },
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
-          "rendered": " loading ",
-          "type": "p",
+          "rendered": null,
+          "type": [Function],
         },
         false,
         false,
@@ -270,9 +264,7 @@ ShallowWrapper {
               Sort By Trending Date
             </Button>
           </div>
-          <p>
-             loading 
-          </p>
+          <Spinner />
         </div>,
         "className": "App",
       },
@@ -317,9 +309,7 @@ ShallowWrapper {
                 Sort By Trending Date
               </Button>
             </div>,
-            <p>
-               loading 
-            </p>,
+            <Spinner />,
             false,
             false,
           ],
@@ -428,13 +418,11 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": " loading ",
-            },
+            "nodeType": "function",
+            "props": Object {},
             "ref": null,
-            "rendered": " loading ",
-            "type": "p",
+            "rendered": null,
+            "type": [Function],
           },
           false,
           false,

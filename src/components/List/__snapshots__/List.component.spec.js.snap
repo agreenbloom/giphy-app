@@ -46,6 +46,8 @@ ShallowWrapper {
         >
           <div
             className="imageContainer"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
               className="card"
@@ -69,6 +71,8 @@ ShallowWrapper {
           </div>
           <div
             className="imageContainer"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
               className="card"
@@ -149,6 +153,8 @@ ShallowWrapper {
           "children": Array [
             <div
               className="imageContainer"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               <a
                 className="card"
@@ -172,6 +178,8 @@ ShallowWrapper {
             </div>,
             <div
               className="imageContainer"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               <a
                 className="card"
@@ -225,6 +233,8 @@ ShallowWrapper {
                 </div>,
               ],
               "className": "imageContainer",
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -261,33 +271,27 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    undefined,
-                    <Rating
-                      handleOnClick={[Function]}
-                      starsSelected={4}
-                      totalStars={5}
-                    />,
-                  ],
+                  "children": <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={4}
+                    totalStars={5}
+                  />,
                   "className": "ratingContainer",
                 },
                 "ref": null,
-                "rendered": Array [
-                  undefined,
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "handleOnClick": [Function],
-                      "starsSelected": 4,
-                      "totalStars": 5,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "handleOnClick": [Function],
+                    "starsSelected": 4,
+                    "totalStars": 5,
                   },
-                ],
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": "div",
               },
             ],
@@ -320,6 +324,8 @@ ShallowWrapper {
                 </div>,
               ],
               "className": "imageContainer",
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -356,33 +362,27 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    undefined,
-                    <Rating
-                      handleOnClick={[Function]}
-                      starsSelected={5}
-                      totalStars={5}
-                    />,
-                  ],
+                  "children": <Rating
+                    handleOnClick={[Function]}
+                    starsSelected={5}
+                    totalStars={5}
+                  />,
                   "className": "ratingContainer",
                 },
                 "ref": null,
-                "rendered": Array [
-                  undefined,
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "handleOnClick": [Function],
-                      "starsSelected": 5,
-                      "totalStars": 5,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "handleOnClick": [Function],
+                    "starsSelected": 5,
+                    "totalStars": 5,
                   },
-                ],
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": "div",
               },
             ],
@@ -458,6 +458,8 @@ ShallowWrapper {
           >
             <div
               className="imageContainer"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               <a
                 className="card"
@@ -481,6 +483,8 @@ ShallowWrapper {
             </div>
             <div
               className="imageContainer"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               <a
                 className="card"
@@ -561,6 +565,8 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="imageContainer"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <a
                   className="card"
@@ -584,6 +590,8 @@ ShallowWrapper {
               </div>,
               <div
                 className="imageContainer"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <a
                   className="card"
@@ -637,6 +645,8 @@ ShallowWrapper {
                   </div>,
                 ],
                 "className": "imageContainer",
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -673,33 +683,27 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      undefined,
-                      <Rating
-                        handleOnClick={[Function]}
-                        starsSelected={4}
-                        totalStars={5}
-                      />,
-                    ],
+                    "children": <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={4}
+                      totalStars={5}
+                    />,
                     "className": "ratingContainer",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    undefined,
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "handleOnClick": [Function],
-                        "starsSelected": 4,
-                        "totalStars": 5,
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "handleOnClick": [Function],
+                      "starsSelected": 4,
+                      "totalStars": 5,
                     },
-                  ],
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": "div",
                 },
               ],
@@ -732,6 +736,8 @@ ShallowWrapper {
                   </div>,
                 ],
                 "className": "imageContainer",
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -768,33 +774,27 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      undefined,
-                      <Rating
-                        handleOnClick={[Function]}
-                        starsSelected={5}
-                        totalStars={5}
-                      />,
-                    ],
+                    "children": <Rating
+                      handleOnClick={[Function]}
+                      starsSelected={5}
+                      totalStars={5}
+                    />,
                     "className": "ratingContainer",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    undefined,
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "handleOnClick": [Function],
-                        "starsSelected": 5,
-                        "totalStars": 5,
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "handleOnClick": [Function],
+                      "starsSelected": 5,
+                      "totalStars": 5,
                     },
-                  ],
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": "div",
                 },
               ],

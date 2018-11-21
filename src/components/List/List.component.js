@@ -76,7 +76,7 @@ export default class List extends Component {
     const { isRatingVisible } = this.state;
 
     const componentClass = classNames("ratingContainer", {
-      ["showItemsHover"]: isRatingVisible,
+      "showItemsHover": isRatingVisible,
     });
 
 		if (!gifs) return;
