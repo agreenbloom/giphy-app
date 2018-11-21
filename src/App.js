@@ -117,6 +117,47 @@ class App extends Component {
     });
   }
 
+  compareValues = (key, order='asc') => {
+    return function(a, b) {
+
+
+      if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+          return 0;
+      }
+
+      const varA = (typeof a[key] === 'string') ?
+        a[key].toUpperCase() : a[key];
+      const varB = (typeof b[key] === 'string') ?
+        b[key].toUpperCase() : b[key];
+      console.log('a', varA);
+      console.log('b', varB)
+      let comparison = 0;
+      if (varA > varB) {
+        comparison = 1;
+      } else if (varA < varB) {
+        comparison = -1;
+      }
+      return (
+        (order === 'desc') ? (comparison * -1) : comparison
+      );
+    };
+  }
+
+
+
+  sortByRating = () => {
+    let { gifs } = this.state;
+
+    const gifsWRating = gifs.filter(g => g.rating)
+    const gifsWOutRating = gifs.filter(g => !g.rating);
+    const sortedWRatings = gifsWRating.sort(this.compareValues(gifsWRating));
+    const sortedGifs = sortedWRatings.concat(gifsWOutRating);
+
+    this.setState({
+      gifs: sortedGifs
+    });
+  }
+
   handleImageRating = (img) => {
     this.setState({
       shouldShowRating: true
@@ -153,7 +194,11 @@ class App extends Component {
               Sort By Trending Date
             </Button>
 
-
+            {this.state.shouldShowRating && (
+              <Button handleClick={this.sortByRating}>
+                Sort By Rating
+              </Button>
+            )}
           </div>
 
           {isLoading && <p> loading </p>}
