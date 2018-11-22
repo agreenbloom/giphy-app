@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
-import Rating from '../Rating/Rating.component.js';
+import Image from '../Image/Image.component.js';
 import Lightbox from 'react-images';
 
 import "./styles.css";
@@ -19,15 +18,8 @@ export default class List extends Component {
 		this.state = {
 			lightboxIsOpen: false,
 			currentImage: 0,
-      isRatingVisible: false,
 		};
   }
-
-  onMouseEnter = () => {
-    this.setState({ isRatingVisible: true });
-  };
-
-  onMouseLeave = () => this.setState({ isRatingVisible: false });
 
 
   openLightbox = (index, event) => {
@@ -73,29 +65,14 @@ export default class List extends Component {
 
   renderGallery = () => {
 		const { gifs } = this.props;
-    const { isRatingVisible } = this.state;
-
-    const componentClass = classNames("ratingContainer", {
-      "showItemsHover": isRatingVisible,
-    });
 
 		if (!gifs) return;
 
 		const gallery = gifs.map((img, i) => {
 			return (
-        <div className="imageContainer" key={i} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-  				<a
-  					href={img.preview}
-  					key={i}
-  					onClick={(e) => this.openLightbox(i, e)}
-            className="card"
-  				>
-  					<img src={img.preview}  alt=''/>
-  				</a>
-          <div className={componentClass} >
-            <Rating starsSelected={img.rating ? img.rating : 0} handleOnClick={this.handleRatingClick.bind(this, i)}/>
-          </div>
-        </div>
+        <React.Fragment>
+          <Image gif={img} key={i} index={i} handleRatingClick={this.handleRatingClick} handleToggleLightbox={this.openLightbox}/>
+        </React.Fragment>
 			);
 		});
 
