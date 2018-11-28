@@ -1,40 +1,19 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-
-import Rating from '../Rating/Rating.component.js';
-
 
 export default class Image extends Component {
   static propTypes = {
-    handleRatingClick: PropTypes.func,
+    handleToggleLightbox: PropTypes.func,
+    index: PropTypes.number
   };
 
 
-  constructor () {
-    super();
-
-    this.state = {
-      isRatingVisible: false,
-    };
-  }
-
-
-  onMouseEnter = () => this.setState({ isRatingVisible: true });
-
-  onMouseLeave = () => this.setState({ isRatingVisible: false });
-
 
   render() {
-    const { gif, index, handleRatingClick, handleToggleLightbox } = this.props;
-    const { isRatingVisible } = this.state;
-
-    const componentClass = classNames("ratingContainer", {
-      "showItemsHover": isRatingVisible,
-    });
-
+    const { gif, index, handleToggleLightbox } = this.props;
+  
     return(
-      <div className="imageContainer" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+      <div className="imageContainer">
         <a
           href={gif.preview}
           key={index}
@@ -43,9 +22,7 @@ export default class Image extends Component {
         >
           <img src={gif.preview}  alt=''/>
         </a>
-        <div className={componentClass} >
-          <Rating starsSelected={gif.rating ? gif.rating : 0} handleOnClick={handleRatingClick.bind(this, index)}/>
-        </div>
+
       </div>
     )
   }

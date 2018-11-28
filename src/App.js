@@ -59,7 +59,7 @@ class App extends Component {
 
     this.setState({
       isLoading: true
-    })
+    });
 
     axios.get(`${API_URL}?q=${this.state.query}&limit=15&api_key=${API_KEY}&offset=${offset}`)
     .then(resp => resp.data.data.map(result => ({
@@ -71,8 +71,9 @@ class App extends Component {
       timeTrending: result.trending_datetime,
     })))
     .then(newData => {
-      this.setState({gifs: newData})
+      console.log('newData', newData)
       this.setState({
+        gifs: newData,
         isLoading: false,
         displayTitle: this.state.query
       })
@@ -81,13 +82,13 @@ class App extends Component {
 
   loadMoreGifs = (direction) => {
 
-    const { offset } = this.state;
+    const { offset, gifs } = this.state;
     let offsetAmount;
 
     if(direction === 'next') {
-      offsetAmount = offset + 25;
+      offsetAmount = offset + gifs.length;
     } else {
-      offsetAmount = offset - 25;
+      offsetAmount = offset - gifs.length;
     }
 
     this.setState({ offset: offsetAmount});
@@ -118,52 +119,6 @@ class App extends Component {
     });
   }
 
-  compareValues = (key, order='asc') => {
-    return function(a, b) {
-
-
-      if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
-          return 0;
-      }
-
-      const varA = (typeof a[key] === 'string') ?
-        a[key].toUpperCase() : a[key];
-      const varB = (typeof b[key] === 'string') ?
-        b[key].toUpperCase() : b[key];
-      console.log('a', varA);
-      console.log('b', varB)
-      let comparison = 0;
-      if (varA > varB) {
-        comparison = 1;
-      } else if (varA < varB) {
-        comparison = -1;
-      }
-      return (
-        (order === 'desc') ? (comparison * -1) : comparison
-      );
-    };
-  }
-
-
-
-  sortByRating = () => {
-    this.setState({
-      isLoading: true,
-    })
-    let { gifs } = this.state;
-
-    const gifsWRating = gifs.filter(g => g.rating)
-    const gifsWOutRating = gifs.filter(g => !g.rating);
-    const sortedWRatings = gifsWRating.sort(this.compareValues(gifsWRating));
-    const sortedGifs = sortedWRatings.concat(gifsWOutRating);
-
-    this.setState({
-      gifs: sortedGifs
-    });
-    this.setState({
-      isLoading: false,
-    })
-  }
 
   handleImageRating = (img) => {
     this.setState({
